@@ -49,6 +49,7 @@ git add README.md
 git commit -m ":tada:first commit"
 if [ $? != 0 ]; then ExistError 'git commitに失敗しました。' 'rm' $1; fi
 
+# デフォルトはmainブランチ
 git branch -M main
 if [ $? != 0 ]; then ExistError 'ブランチの作成に失敗しました。' 'rm' $1; fi
 

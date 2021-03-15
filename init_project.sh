@@ -29,9 +29,7 @@ if [ $? != 0 ]; then ExistError 'GitHub CLIが見つかりません。インス�
 if [ -z $1 ]; then ExistError 'プロジェクト名が指定されていません。'; fi
 if [ $1 = '.' -o $1 = '..' ]; then ExistError "プロジェクト名'$1'は指定できません。"; fi
 if [ $1 = '.' -o $1 = '..' ]; then ExistError "プロジェクト名'$1'は指定できません。"; fi
-if [ $SHELL = '/bin/zsh' ]; then
-  if [ !`echo $1 | wc -m` -le 101 ]; then ConfirmExecution '100文字までが名前として有効になります。'; fi
-fi
+if [ `echo $1 | wc -m` -ge 102 ]; then ConfirmExecution '100文字までが名前として有効になります。'; fi
 if [ `echo $1 | egrep "\!|\#|\%|\&|\(|\)|\=|\^|\~|\¥|\@|\[|\{|\;|\+|\:|\*|\]|\}|\,|\.|/|\?"` ]; then ConfirmExecution '名前の一部が"-(ハイフン)"に置き換わります。'; fi
 
 # GitHubユーザー名の取得

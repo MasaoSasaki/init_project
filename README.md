@@ -9,7 +9,7 @@
    
 ## 使用方法
 以下のコマンドでホームディレクトリにスクリプトを作成します。  
-```curl https://raw.githubusercontent.com/MasaoSasaki/init_project/main/init_project.sh > ~/init_project.sh ; chmod 755 ~/init_project.sh```  
+```curl https://raw.githubusercontent.com/MasaoSasaki/init_project/main/init_project.sh > ~/init_project.sh && chmod 755 ~/init_project.sh```  
   
 以下のコマンドでスクリプトを実行すると、カレントディレクトリにプロジェクトディレクトリとGitHubに同名の新規リポジトリが作成されます。  
 ```~/init_project.sh <プロジェクト名>```  
